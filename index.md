@@ -14,6 +14,7 @@ I am a Master student at Uviersity of Tokyo.
 
 ## News
 
+- **[Jun. 2023]** Our paper about synesthesia is accepted to ALIFE workshop on Cognitive feelings
 - **[Mar. 2023]** I speak at The Future of STS Research in Japan and Korea: A Networking Workshop for Young Researcher
 - **[Apr. 2020]** Our paper about flextible method for secondary data is accepted to IC2S2
 - **[Jan. 2022]** Our paper about fairness in multi-robot navigation is accepted to AAMAS2023
