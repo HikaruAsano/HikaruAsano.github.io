@@ -8,7 +8,7 @@ I am a Master student at Uviersity of Tokyo.
 
 ## Research Interests
 
-- **Multi-agent Reinforcement Learning:** Fairness in MARL, Social Dilemma game
+- **Multi-agent Reinforcement Learning:** Cooperation in Decentralized Manner
 - **Computational Social Science:** Application of ML for Social Science
 - **Methodology for Social Science:** Crisis of Replication, Qualitative Analysis
 
@@ -20,12 +20,12 @@ I am a Master student at Uviersity of Tokyo.
 - **[Jan. 2022]** Our paper about fairness in multi-robot navigation is accepted to AAMAS2023
 
 ## Education
-
-- M.S in Graduate School of Interdisciplinary Information Studies, The University of Tokyo (2022.4-present)
+- D.Sc in Graduate School of Arts and Sciences, The University of Tokyo (2024.4-present)
+- M.S in Graduate School of Interdisciplinary Information Studies, The University of Tokyo (2022.4-2024.3)
 - B.E in Systems Innovation,Faculty of Engineering, The University of Tokyo (2019.4-2022.3)
 
-## Internship
-
+## Job **Experiences**
+- CyberAgent AI Lab, Part-time Researcher (2023.10-present)
 - OMRON SINIC X Corporation, Research Intern (2020.8-2020.9)
 - OMRON SINIC X Corporation, Research Intern (2022.3-present)
 
