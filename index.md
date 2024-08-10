@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am a first-year PhD student at Uviersity of Tokyo.
+I am a 1st-year Phd student at Uviersity of Tokyo.
 
 ## Research Interests
 
