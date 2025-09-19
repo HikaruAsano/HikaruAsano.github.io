@@ -3,7 +3,7 @@
 <h4 style="margin:0 10px 0;">International Cenference (Peer-reviewed)</h4>
 
 <ul style="margin:0 0 5px;">
-  <li><a><autocolor><strong>Hikaru Asano</strong>, Tadashi Kozuno, Yukino Baba, “Self Iterative Label Refinement via Robust Unlabeled Learning”, Advances in Neural Information Processing Systems 38 (<strong>NeurIPS</strong>), 2025, (poster, acceptance rate 24.5%) </autocolor></a></li>
+  <li><a><autocolor><strong>Hikaru Asano</strong>, Tadashi Kozuno, Yukino Baba, “Self Iterative Label Refinement via Robust Unlabeled Learning”, The Thirty-Ninth Annual Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>), 2025, (poster, acceptance rate 24.5%) </autocolor></a></li>
   <li><a><autocolor><strong>Hikaru Asano</strong>, Ryo Yonetani, Taiki Sekii, Hiroki Ouchi, “Text2Traj2Text: Learning-by-Synthesis Framework for Contextual Captioning of Human Movement Trajectories”, International Natural Language Generation Conference (<strong>INLG</strong>), 2024, (long paper) </autocolor></a></li>
   <li><a><autocolor>Eiko Matsuda, <strong>Hikaru Asano</strong>, Tomoyuki Yuzawa, Osamu Sakura, “Quantitative and Qualitative Analyses on Child’s Animate Tendency”, Cognitive feelings: Towards multi-disciplinary approaches for realizing artificial systems with cognitive capacities (<strong>ALIFE 2023 workshop</strong>), 2023 </autocolor></a></li>
   <li><a><autocolor><strong>Hikaru Asano</strong>, Osamu Sakura, “Rashomon Bound Regression: a Reproducible and Explorable Method for Regression-Based Analysis”, International Conference on Computational Social Science (<strong>IC2S2</strong>), 2023,  (poster) </autocolor></a></li>
