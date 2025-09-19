@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am a 1st-year Phd student at Uviersity of Tokyo.
+I am a 2nd-year Phd student at Uviersity of Tokyo.
 
 ## Research Interests
 
@@ -13,8 +13,8 @@ I am a 1st-year Phd student at Uviersity of Tokyo.
 - **LLM for Behavior Understanding** Replication of Human Behavior and Utilizing Common Sense Reasoning
 
 ## News
-
-- **[Aug. 2023]** Our paper Human trajectory captioning has been accepted to INLG 2024.
+- **[Sep. 2025]** Our paper on LLM's self-reflection has been accepted to NeurIPS 2025.
+<!-- - **[Aug. 2023]** Our paper Human trajectory captioning has been accepted to INLG 2024. -->
 
 ## Education
 - D.Sc in Graduate School of Arts and Sciences, The University of Tokyo (2024.4-present)
