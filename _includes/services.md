@@ -20,10 +20,11 @@
 
 <h4 style="margin:0 10px 0;">Preprint</h4>
 <ul style="margin:0 0 5px;">
+  <li><a><autocolor><strong>Hikaru Asano</strong>, Tadashi Kozuno, Kuniaki Saito, Yukino Baba, "Where-to-Unmask: Ground-Truth-Guided Unmasking Order Learning for Masked Diffusion Language Models", arXiv preprint, 2026</autocolor></a> <a href="https://arxiv.org/abs/2602.09501">paper</a></li>
   <li><a><autocolor><strong>Hikaru Asano</strong>, Hiroki Ouchi, Akira Kasuga, Ryo Yonetani, "MobQA: A Benchmark Dataset for Semantic Understanding of Human Mobility Data through Question Answering", arXiv preprint, 2025</autocolor></a> <a href="https://arxiv.org/abs/2508.11163">paper</a></li>
 </ul>
 <ul style="margin:0 0 20px;">
-  <li><a><autocolor><strong>Hikaru Asano</strong>, “Sequential Bayesian experimental designs via reinforcement learning”, arXiv preprint, 2022</autocolor></a> <a href="https://arxiv.org/abs/2202.07472">paper</a></li>
+  <li><a><autocolor><strong>Hikaru Asano</strong>, "Sequential Bayesian experimental designs via reinforcement learning", arXiv preprint, 2022</autocolor></a> <a href="https://arxiv.org/abs/2202.07472">paper</a></li>
 </ul>
 
 ## Awards and Honors

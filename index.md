@@ -13,6 +13,8 @@ I am a 2nd-year Phd student at Uviersity of Tokyo.
 - **LLM for Behavior Understanding** Replication of Human Behavior and Utilizing Common Sense Reasoning
 
 ## News
+- **[Mar. 2026]** Our paper on Masked Diffusion Language Models has been selected for oral presentation at NLP 2026 (32 out of 799 submissions).
+- **[Feb. 2026]** Release new preprint on Masked Diffusion Language Models.
 - **[Sep. 2025]** Our paper on LLM's self-reflection has been accepted to NeurIPS 2025.
 <!-- - **[Aug. 2023]** Our paper Human trajectory captioning has been accepted to INLG 2024. -->
 
