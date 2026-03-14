@@ -1,0 +1,11 @@
+## Academic Services
+
+{%- if site.data.services.reviewer.size > 0 %}
+<h4 class="pub-section-header">Reviewer</h4>
+
+<ul class="pub-list">
+{%- for service in site.data.services.reviewer %}
+  <li><autocolor>{{ service.name }}, {{ service.year }}</autocolor></li>
+{%- endfor %}
+</ul>
+{%- endif %}

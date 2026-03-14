@@ -1,0 +1,17 @@
+## Awards and Honors
+
+<h4 class="pub-section-header">Scholarship and Grant</h4>
+
+<ul class="pub-list">
+{% for award in site.data.awards.scholarships %}
+  <li><autocolor>{{ award.title }}, {{ award.description }}</autocolor></li>
+{% endfor %}
+</ul>
+
+<h4 class="pub-section-header">Academic Award</h4>
+
+<ul class="pub-list">
+{% for award in site.data.awards.academic_awards %}
+  <li><autocolor>{{ award.title }}, {{ award.description }}</autocolor></li>
+{% endfor %}
+</ul>

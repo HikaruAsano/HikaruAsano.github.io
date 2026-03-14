@@ -1,0 +1,16 @@
+# =============================================================================
+# News Data
+# =============================================================================
+# To add a new news item, add an entry at the top of the list.
+# Fields:
+#   date    - Display date (e.g., "Mar. 2026")
+#   content - News content (HTML supported)
+# =============================================================================
+- date: "Mar. 2026"
+  content: "Received Young Researcher Award (**21/517 top 4%**) at NLP 2026."
+- date: "Mar. 2026"
+  content: "Our paper on Masked Diffusion Language Models has been selected for oral presentation at NLP 2026 (32 out of 799 submissions)."
+- date: "Feb. 2026"
+  content: "Release new preprint on Masked Diffusion Language Models."
+- date: "Sep. 2025"
+  content: "Our paper on LLM's self-reflection has been accepted to NeurIPS 2025."

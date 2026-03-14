@@ -1,0 +1,25 @@
+## Publications
+
+<h4 class="pub-section-header">International Conference (Peer-reviewed)</h4>
+
+<ul class="pub-list">
+{% for pub in site.data.publications.peer_reviewed %}
+  <li><autocolor>{{ pub.authors }}, "{{ pub.title }}", {{ pub.venue_full }} (<strong>{{ pub.venue }}</strong>), {{ pub.year }}{% if pub.note %}, ({{ pub.note }}){% endif %}</autocolor>
+  {% if pub.arxiv %} <a href="{{ pub.arxiv }}">paper</a>{% endif %}
+  {% if pub.project %} <a href="{{ pub.project }}">project</a>{% endif %}
+  {% if pub.github %} <a href="{{ pub.github }}">code</a>{% endif %}
+  </li>
+{% endfor %}
+</ul>
+
+<h4 class="pub-section-header">Preprint</h4>
+
+<ul class="pub-list">
+{% for pub in site.data.publications.preprints %}
+  <li><autocolor>{{ pub.authors }}, "{{ pub.title }}", arXiv preprint, {{ pub.year }}</autocolor>
+  {% if pub.arxiv %} <a href="{{ pub.arxiv }}">paper</a>{% endif %}
+  {% if pub.project %} <a href="{{ pub.project }}">project</a>{% endif %}
+  {% if pub.github %} <a href="{{ pub.github }}">code</a>{% endif %}
+  </li>
+{% endfor %}
+</ul>

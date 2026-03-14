@@ -1,0 +1,16 @@
+# =============================================================================
+# Academic Services Data
+# =============================================================================
+# To add a new service, add an entry to the appropriate section.
+# Fields:
+#   name - Name of the conference, journal, or organization
+#   role - Your role (e.g., "Reviewer", "Program Committee")
+#   year - Year(s) of service (e.g., "2025", "2024-2025")
+# =============================================================================
+
+reviewer:
+ - name: "ACL Jan"
+   year: "2026"
+
+#  - name: "ICML"
+#    year: "2026"

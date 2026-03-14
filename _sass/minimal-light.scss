@@ -28,43 +28,12 @@ body {
 
 @media (prefers-color-scheme: dark) { .social-icons a {color: #3eb7f0 !important; }}
 
-.social-icons a:last-child{margin-right:0}.social-icons a:hover{background-color:white;
-    color:black;
-    transform: scale(1.2)}
-    /*
-    .social-icons a:after {
-        content: '';
-        display: block;
-        margin: 0px;
-        height: 1px;
-        width: 0px;
-        background: transparent;
-        transition: width .5s ease, background-color .5s ease;
-      }
-      .social-icons a:hover:after {
-        width: 100%;
-        background: #337ab7;
-      }
-     */
+.social-icons a:last-child{margin-right:0}
+.social-icons a:hover{background-color:white; color:black; transform: scale(1.2)}
 
-@media (prefers-color-scheme: dark) {.social-icons a:last-child{margin-right:0}.social-icons a:hover{background-color:#20212b;
-    color:black;
-    transform: scale(1.2)} 
-    /*
-    .social-icons a:after {
-        content: '';
-        display: block;
-        margin: 0px;
-        height: 1px;
-        width: 0px;
-        background: transparent;
-        transition: width .5s ease, background-color .5s ease;
-      }
-    .social-icons a:hover:after {
-        width: 100%;
-        background: #a0b0ff;
-      }
-    */
+@media (prefers-color-scheme: dark) {
+  .social-icons a:last-child{margin-right:0}
+  .social-icons a:hover{background-color:#20212b; color:black; transform: scale(1.2)}
 }
 
 .icon-button{
@@ -118,6 +87,18 @@ body {
 email {
     font-size: 14px;
     font-family: "Ubuntu Mono";
+}
+
+position {
+    font-size: 1.10rem;
+}
+
+.pub-section-header {
+    margin: 0 10px 0;
+}
+
+.pub-list {
+    margin: 0 0 5px;
 }
 
 .icon-button i{
@@ -539,9 +520,7 @@ footer {
     padding:0;
   }
 
-  header ul, header p.view {
-    
-  }
+  header ul, header p.view {}
 
   pre, code {
     word-wrap:normal;

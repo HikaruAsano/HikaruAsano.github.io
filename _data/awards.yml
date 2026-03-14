@@ -1,0 +1,21 @@
+# =============================================================================
+# Awards and Honors Data
+# =============================================================================
+# To add a new award, add an entry to the appropriate section.
+# Fields:
+#   title       - Award/scholarship name
+#   description - Details (amount, duration, etc.)
+# =============================================================================
+
+scholarships:
+  - title: "Research RA in Value Exchange Engineering by RIISE@UTokyo"
+    description: "\\2,000,000, 2023-2024."
+
+  - title: "The foundation Matsuo Scholarship Society"
+    description: "Scholarship and commuting expenses grant, free accommodation in student dormitories, provision of meals (free), health insurance expenses grant, total amount granted: approximately \\5,000,000, 2019-2023."
+
+academic_awards:
+  - title: "Young Researcher Award (21/517)"
+    description: "The 32nd Annual Meeting of the Association for Natural Language Processing@Japan, 2026."
+  - title: "Hatakeyama Prize"
+    description: "Tomakomai National Institute of Technology, 2019."
