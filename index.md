@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am a 2nd-year PhD student at University of Tokyo.
+I am a 3rd-year PhD student at University of Tokyo.
 
 ## Research Interests
 
@@ -20,6 +20,7 @@ I am a 2nd-year PhD student at University of Tokyo.
 - B.E in Systems Innovation, Faculty of Engineering, The University of Tokyo (2019.4-2022.3)
 
 ## Job Experiences
+- Sakana AI, Research Intern (2026.4-present)
 - OMRON SINIC X Corporation, Research Intern (2025.12-2026.3)
 - CyberAgent AI Lab, Part-time Researcher (2023.10-2025.10)
 - OMRON SINIC X Corporation, Research Intern (2022.3-2023.8)
