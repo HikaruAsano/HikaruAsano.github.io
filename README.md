@@ -49,12 +49,8 @@ The CV is generated locally from the `_data/` YAML files. Requires [PyYAML](http
 # First time only
 pip install pyyaml
 
-# Generate LaTeX and compile PDF
+# Generate LaTeX, compile PDF, and place it in assets/files/CV.pdf
 python scripts/generate_cv.py
-cd cv && latexmk -pdf hikaru_asano_cv.tex
-
-# Copy the compiled PDF to assets
-cp cv/hikaru_asano_cv.pdf assets/files/CV.pdf
 ```
 
 ## How to Edit

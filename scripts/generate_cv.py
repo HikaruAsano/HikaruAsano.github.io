@@ -2,6 +2,8 @@
 """Generate CV LaTeX from Jekyll _data YAML files, then write to cv/hikaru_asano_cv.tex."""
 
 import re
+import shutil
+import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -511,7 +513,23 @@ def main():
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(parts), encoding="utf-8")
-    print(f"Generated: {OUT}")
+    print(f"Generated:  {OUT}")
+
+    # Compile to PDF
+    result = subprocess.run(
+        ["latexmk", "-pdf", "-interaction=nonstopmode", OUT.name],
+        cwd=OUT.parent,
+    )
+    if result.returncode != 0:
+        print("Error: latexmk failed. Check the LaTeX log for details.", file=sys.stderr)
+        sys.exit(1)
+
+    # Copy PDF to assets/files/CV.pdf
+    pdf_src = OUT.with_suffix(".pdf")
+    pdf_dst = ROOT / "assets" / "files" / "CV.pdf"
+    pdf_dst.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(pdf_src, pdf_dst)
+    print(f"Copied PDF: {pdf_dst}")
 
 
 if __name__ == "__main__":
