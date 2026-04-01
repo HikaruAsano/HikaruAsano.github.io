@@ -4,10 +4,16 @@
 
 <ul class="pub-list">
 {% for pub in site.data.publications.peer_reviewed %}
-  <li><autocolor>{{ pub.authors }}, "{{ pub.title }}", {{ pub.venue_full }} (<strong>{{ pub.venue }}</strong>), {{ pub.year }}{% if pub.note %}, ({{ pub.note }}){% endif %}</autocolor>
-  {% if pub.arxiv %} <a href="{{ pub.arxiv }}">paper</a>{% endif %}
-  {% if pub.project %} <a href="{{ pub.project }}">project</a>{% endif %}
-  {% if pub.github %} <a href="{{ pub.github }}">code</a>{% endif %}
+  <li>
+    <span class="pub-authors">{{ pub.authors }}</span>,
+    &ldquo;{{ pub.title }}&rdquo;,
+    {{ pub.venue_full }} (<strong>{{ pub.venue }}</strong>), {{ pub.year }}{% if pub.note %},
+    <span class="pub-note">{{ pub.note }}</span>{% endif %}
+    <div class="pub-links">
+      {% if pub.arxiv %}<a class="pub-badge" href="{{ pub.arxiv }}" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> arXiv</a>{% endif %}
+      {% if pub.github %}<a class="pub-badge" href="{{ pub.github }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>{% endif %}
+      {% if pub.project %}<a class="pub-badge" href="{{ pub.project }}" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Project</a>{% endif %}
+    </div>
   </li>
 {% endfor %}
 </ul>
@@ -16,10 +22,15 @@
 
 <ul class="pub-list">
 {% for pub in site.data.publications.preprints %}
-  <li><autocolor>{{ pub.authors }}, "{{ pub.title }}", arXiv preprint, {{ pub.year }}</autocolor>
-  {% if pub.arxiv %} <a href="{{ pub.arxiv }}">paper</a>{% endif %}
-  {% if pub.project %} <a href="{{ pub.project }}">project</a>{% endif %}
-  {% if pub.github %} <a href="{{ pub.github }}">code</a>{% endif %}
+  <li>
+    <span class="pub-authors">{{ pub.authors }}</span>,
+    &ldquo;{{ pub.title }}&rdquo;,
+    arXiv preprint, {{ pub.year }}
+    <div class="pub-links">
+      {% if pub.arxiv %}<a class="pub-badge" href="{{ pub.arxiv }}" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> arXiv</a>{% endif %}
+      {% if pub.github %}<a class="pub-badge" href="{{ pub.github }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>{% endif %}
+      {% if pub.project %}<a class="pub-badge" href="{{ pub.project }}" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Project</a>{% endif %}
+    </div>
   </li>
 {% endfor %}
 </ul>

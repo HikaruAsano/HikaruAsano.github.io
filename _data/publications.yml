@@ -22,6 +22,7 @@ peer_reviewed:
     year: 2025
     note: "poster, acceptance rate 24.5%"
     arxiv: "https://arxiv.org/abs/2502.12565"
+    github: "https://github.com/HikaruAsano/SelfIterativeLabelRefinement"
 
   - authors: "<strong>Hikaru Asano</strong>, Hiroki Ouchi, Taiki Sekii, Ryo Yonetani"
     title: "Text2Traj2Text: Learning-by-Synthesis Framework for Contextual Captioning of Human Movement Trajectories"
@@ -30,6 +31,7 @@ peer_reviewed:
     year: 2024
     note: "long paper"
     arxiv: "https://arxiv.org/abs/2409.12670"
+    github: "https://github.com/CyberAgentAILab/text2traj2text"
 
   - authors: "Eiko Matsuda, <strong>Hikaru Asano</strong>, Tomoyuki Yuzawa, Osamu Sakura"
     title: "Quantitative and Qualitative Analyses on Child's Animate Tendency"
@@ -51,6 +53,8 @@ peer_reviewed:
     year: 2023
     note: "oral, acceptance rate 23.3%"
     arxiv: "https://arxiv.org/abs/2305.11465"
+    github: "https://github.com/omron-sinicx/ncf2"
+
 
 preprints:
   - authors: "<strong>Hikaru Asano</strong>, Tadashi Kozuno, Kuniaki Saito, Yukino Baba"
@@ -62,6 +66,7 @@ preprints:
     title: "MobQA: A Benchmark Dataset for Semantic Understanding of Human Mobility Data through Question Answering"
     year: 2025
     arxiv: "https://arxiv.org/abs/2508.11163"
+    github: "https://github.com/CyberAgentAILab/mobqa"
 
   - authors: "<strong>Hikaru Asano</strong>"
     title: "Sequential Bayesian experimental designs via reinforcement learning"

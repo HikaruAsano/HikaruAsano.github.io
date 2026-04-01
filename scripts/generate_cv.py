@@ -43,17 +43,23 @@ def safe(s: str) -> str:
 
 
 def format_links(pub: dict) -> str | None:
-    """Build a LaTeX hyperlink line from optional arxiv/github/project fields."""
+    """Build badge-style hyperlinks from optional arxiv/github/project fields."""
     entries = []
     if pub.get("arxiv"):
-        entries.append(rf"\hrefWithoutArrow{{{pub['arxiv']}}}{{arXiv}}")
+        entries.append(
+            rf"\cvbadge{{{pub['arxiv']}}}{{\faIcon{{file-alt}}~arXiv}}"
+        )
     if pub.get("github"):
-        entries.append(rf"\hrefWithoutArrow{{{pub['github']}}}{{GitHub}}")
+        entries.append(
+            rf"\cvbadge{{{pub['github']}}}{{\faIcon{{github}}~Code}}"
+        )
     if pub.get("project"):
-        entries.append(rf"\hrefWithoutArrow{{{pub['project']}}}{{Project Page}}")
+        entries.append(
+            rf"\cvbadge{{{pub['project']}}}{{\faIcon{{globe}}~Project}}"
+        )
     if not entries:
         return None
-    return r"\textcolor{accentColor}{" + " $|$ ".join(entries) + "}"
+    return r"\mbox{" + r"\hspace{3pt}".join(entries) + "}"
 
 
 def format_note(note: str) -> str | None:
@@ -398,6 +404,16 @@ PREAMBLE = r"""\documentclass[10pt, letterpaper]{article}
 }
 
 \let\hrefWithoutArrow\href
+
+% Badge-style link command: coloured chip with icon and label
+\newcommand{\cvbadge}[2]{%
+  \href{#1}{%
+    {\setlength{\fboxsep}{2.5pt}%
+     \colorbox{primaryColor!10}{%
+       \textcolor{primaryColor}{\footnotesize\bfseries #2}%
+     }}%
+  }%
+}
 """
 
 
