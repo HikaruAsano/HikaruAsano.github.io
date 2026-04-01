@@ -36,30 +36,25 @@ A personal academic website built with Jekyll and GitHub Pages, using the [Minim
 ├── scripts/
 │   └── generate_cv.py                # Generates cv/hikaru_asano_cv.tex from _data/
 ├── cv/
-│   └── hikaru_asano_cv.tex           # Auto-generated LaTeX source (do not edit manually)
-├── .github/
-│   └── workflows/
-│       └── update_cv.yml             # Auto-updates CV on push
+│   └── hikaru_asano_cv.tex           # Generated LaTeX source (do not edit manually)
 ├── Gemfile                           # Ruby dependencies
 └── CNAME                             # Custom domain configuration
 ```
 
-## CV Auto-Generation
+## CV Generation
 
-The CV (`assets/files/CV.pdf`) is automatically regenerated whenever `_data/` files or `index.md` are pushed to `main`.
-
-**Workflow:**
-1. Push a change to any `_data/*.yml` or `index.md`
-2. GitHub Actions runs `scripts/generate_cv.py` → `cv/hikaru_asano_cv.tex`
-3. LaTeX compiles the `.tex` → `assets/files/CV.pdf`
-4. Both files are committed back automatically
-
-To regenerate the CV locally (requires [PyYAML](https://pypi.org/project/PyYAML/) and a LaTeX distribution):
+The CV is generated locally from the `_data/` YAML files. Requires [PyYAML](https://pypi.org/project/PyYAML/) and a LaTeX distribution.
 
 ```bash
+# First time only
 pip install pyyaml
+
+# Generate LaTeX and compile PDF
 python scripts/generate_cv.py
 cd cv && latexmk -pdf hikaru_asano_cv.tex
+
+# Copy the compiled PDF to assets
+cp cv/hikaru_asano_cv.pdf assets/files/CV.pdf
 ```
 
 ## How to Edit

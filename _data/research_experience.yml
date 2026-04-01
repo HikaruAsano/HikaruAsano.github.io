@@ -9,35 +9,21 @@
   role: "Research Intern"
   start: "Dec 2025"
   end: "Mar 2026"
-  mentors:
-    - "Tadashi Kozuno"
-    - "Kuniaki Saito"
-  topic: "Diffusion Language Models and Vision-Language Models"
 
 - organization: "CyberAgent AI Lab"
   location: "Tokyo, Japan"
   role: "Part-time Researcher"
   start: "Oct 2023"
   end: "Oct 2025"
-  mentors:
-    - "Ryo Yonetani"
-  topic: "Human Behavior Understanding"
 
 - organization: "OMRON SINIC X Corporation"
   location: "Tokyo, Japan"
   role: "Research Intern"
   start: "Mar 2022"
   end: "Aug 2023"
-  mentors:
-    - "Ryo Yonetani"
-    - "Tadashi Kozuno"
-  topic: "Multi-Agent Reinforcement Learning"
 
 - organization: "OMRON SINIC X Corporation"
   location: "Tokyo, Japan"
   role: "Research Intern"
   start: "Aug 2020"
   end: "Sep 2020"
-  mentors:
-    - "Mai Nishimura"
-  topic: "Social Dilemma in Multi-Agent Reinforcement Learning"

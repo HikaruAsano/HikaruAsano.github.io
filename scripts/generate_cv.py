@@ -42,6 +42,20 @@ def safe(s: str) -> str:
     return s
 
 
+def format_links(pub: dict) -> str | None:
+    """Build a LaTeX hyperlink line from optional arxiv/github/project fields."""
+    entries = []
+    if pub.get("arxiv"):
+        entries.append(rf"\hrefWithoutArrow{{{pub['arxiv']}}}{{arXiv}}")
+    if pub.get("github"):
+        entries.append(rf"\hrefWithoutArrow{{{pub['github']}}}{{GitHub}}")
+    if pub.get("project"):
+        entries.append(rf"\hrefWithoutArrow{{{pub['project']}}}{{Project Page}}")
+    if not entries:
+        return None
+    return r"\textcolor{accentColor}{" + " $|$ ".join(entries) + "}"
+
+
 def format_note(note: str) -> str | None:
     """Turn note YAML string into a coloured LaTeX line.
 
@@ -154,6 +168,9 @@ def build_publications(data: dict) -> str:
         item += f"            \\textit{{{venue_full}}} \\textbf{{({venue})}}, {year}"
         if note_tex:
             item += f" \\newline\n            {note_tex}"
+        links_tex = format_links(pub)
+        if links_tex:
+            item += f" \\newline\n            {links_tex}"
         lines.append(item)
         lines.append("")
     lines.append(r"        \end{highlights}")
@@ -172,6 +189,9 @@ def build_publications(data: dict) -> str:
         item = f"            \\item {authors} \\newline\n"
         item += f"            ``{title}'' \\newline\n"
         item += f"            \\textit{{arXiv preprint}}, {year}"
+        links_tex = format_links(pub)
+        if links_tex:
+            item += f" \\newline\n            {links_tex}"
         lines.append(item)
         lines.append("")
     lines.append(r"        \end{highlights}")

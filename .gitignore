@@ -6,3 +6,15 @@ Gemfile.lock
 .DS_Store
 .jekyll-cache
 git-update.sh
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.synctex.gz(busy)
+*.synctex.gz(busy)
