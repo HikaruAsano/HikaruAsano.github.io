@@ -67,3 +67,8 @@ preprints:
     title: "Sequential Bayesian experimental designs via reinforcement learning"
     year: 2022
     arxiv: "https://arxiv.org/abs/2202.07472"
+
+patents:
+  - authors: "Ryo Yonetani, Mai Nishimura Kurose, <strong>Hikaru Asano</strong>"
+    title: "Agent Control Device, Learning Device, and Computer-Readable Recording Medium"
+    patent_number: "US Patent App. 18/241,146"

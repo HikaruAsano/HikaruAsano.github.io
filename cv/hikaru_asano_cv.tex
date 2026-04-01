@@ -1,0 +1,374 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\definecolor{accentColor}{RGB}{0, 102, 179}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Hikaru Asano's CV},
+    pdfauthor={Hikaru Asano},
+    pdfcreator={LaTeX},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\Large\color{primaryColor}}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+\titleformat{\subsection}{\bfseries\large\color{accentColor}}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{0.3 cm}{0.15 cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0 cm + 0.00001 cm}{0 cm + 0.00001 cm}
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+
+\newcommand{\placelastupdatedtext}{
+  \AddToShipoutPictureFG*{
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in April 2026}\hspace{\widthof{Last updated in April 2026}}
+    }}}%
+  }%
+}%
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{30 pt}{30 pt}\selectfont\bfseries\color{primaryColor} Hikaru Asano
+
+        \vspace{8 pt}
+
+        \normalsize\color{black}
+        \mbox{{\faIcon{envelope}} \hrefWithoutArrow{mailto:asano-hikaru19@g.ecc.u-tokyo.ac.jp}{asano-hikaru19@g.ecc.u-tokyo.ac.jp}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{{\faIcon{globe}} \hrefWithoutArrow{https://hikaruasano.github.io/}{hikaruasano.github.io}}%
+    \end{header}
+
+    \vspace{5 pt - 0.3 cm}
+
+    \section{Education}
+    
+    \begin{twocolentry}{Apr 2024 -- Present}
+        \textbf{The University of Tokyo} \newline
+        Doctoral Student in Graduate School of Arts and Sciences
+    \end{twocolentry}
+    
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item \textit{Supervisor:} Yukino Baba
+        \end{highlights}
+    \end{onecolentry}
+    
+    \vspace{0.3 cm}
+    
+    \begin{twocolentry}{Apr 2022 -- Mar 2024}
+        \textbf{The University of Tokyo} \newline
+        Master of Interdisciplinary Information Studies in Graduate School of Interdisciplinary Information Studies
+    \end{twocolentry}
+    
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item \textit{Supervisor:} Osamu Sakura
+        \end{highlights}
+    \end{onecolentry}
+    
+    \vspace{0.3 cm}
+    
+    \begin{twocolentry}{Apr 2019 -- Mar 2022}
+        \textbf{The University of Tokyo} \newline
+        Bachelor of Engineering in Systems Innovation, Faculty of Engineering
+    \end{twocolentry}
+    
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item \textit{Supervisor:} Takashi Goda
+        \end{highlights}
+    \end{onecolentry}
+
+    \section{Research Experience}
+    
+    \begin{twocolentry}{Apr 2026 -- Present}
+        \textbf{Sakana AI}, Tokyo, Japan \newline
+        Research Intern
+    \end{twocolentry}
+    
+    \vspace{0.2 cm}
+    
+    \begin{twocolentry}{Dec 2025 -- Mar 2026}
+        \textbf{Omron SINIC X Corporation}, Tokyo, Japan \newline
+        Research Intern
+    \end{twocolentry}
+    
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item \textit{Mentor:} Tadashi Kozuno, Kuniaki Saito
+            \item \textit{Research Topic:} Diffusion Language Models and Vision-Language Models
+        \end{highlights}
+    \end{onecolentry}
+    
+    \vspace{0.2 cm}
+    
+    \begin{twocolentry}{Oct 2023 -- Oct 2025}
+        \textbf{CyberAgent AI Lab}, Tokyo, Japan \newline
+        Part-time Researcher
+    \end{twocolentry}
+    
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item \textit{Mentor:} Ryo Yonetani
+            \item \textit{Research Topic:} Human Behavior Understanding
+        \end{highlights}
+    \end{onecolentry}
+    
+    \vspace{0.2 cm}
+    
+    \begin{twocolentry}{Mar 2022 -- Aug 2023}
+        \textbf{OMRON SINIC X Corporation}, Tokyo, Japan \newline
+        Research Intern
+    \end{twocolentry}
+    
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item \textit{Mentor:} Ryo Yonetani, Tadashi Kozuno
+            \item \textit{Research Topic:} Multi-Agent Reinforcement Learning
+        \end{highlights}
+    \end{onecolentry}
+    
+    \vspace{0.2 cm}
+    
+    \begin{twocolentry}{Aug 2020 -- Sep 2020}
+        \textbf{OMRON SINIC X Corporation}, Tokyo, Japan \newline
+        Research Intern
+    \end{twocolentry}
+    
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item \textit{Mentor:} Mai Nishimura
+            \item \textit{Research Topic:} Social Dilemma in Multi-Agent Reinforcement Learning
+        \end{highlights}
+    \end{onecolentry}
+
+    \section{Publications}
+    
+    \subsection{International Conference (Peer-Reviewed)}
+    
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Hikaru Asano}, Tadashi Kozuno, Yukino Baba \newline
+                ``Self Iterative Label Refinement via Robust Unlabeled Learning'' \newline
+                \textit{The Thirty-Ninth Annual Conference on Neural Information Processing Systems} \textbf{(NeurIPS)}, 2025 \newline
+                \textcolor{accentColor}{Poster presentation $|$ Acceptance rate: 24.5\%}
+    
+                \item \textbf{Hikaru Asano}, Hiroki Ouchi, Taiki Sekii, Ryo Yonetani \newline
+                ``Text2Traj2Text: Learning-by-Synthesis Framework for Contextual Captioning of Human Movement Trajectories'' \newline
+                \textit{International Natural Language Generation Conference} \textbf{(INLG)}, 2024 \newline
+                \textcolor{accentColor}{Long paper}
+    
+                \item Eiko Matsuda, \textbf{Hikaru Asano}, Tomoyuki Yuzawa, Osamu Sakura \newline
+                ``Quantitative and Qualitative Analyses on Child's Animate Tendency'' \newline
+                \textit{Cognitive feelings: Towards multi-disciplinary approaches for realizing artificial systems with cognitive capacities} \textbf{(ALIFE 2023 workshop)}, 2023
+    
+                \item \textbf{Hikaru Asano}, Osamu Sakura \newline
+                ``Rashomon Bound Regression: a Reproducible and Explorable Method for Regression-Based Analysis'' \newline
+                \textit{International Conference on Computational Social Science} \textbf{(IC2S2)}, 2023 \newline
+                \textcolor{accentColor}{Poster presentation}
+    
+                \item \textbf{Hikaru Asano}, Ryo Yonetani, Mai Nishimura, Tadashi Kozuno \newline
+                ``Counterfactual Fairness Filter for Fair-Delay Multi-Robot Navigation'' \newline
+                \textit{International Conference on Autonomous Agents and Multi-Agent Systems} \textbf{(AAMAS)}, 2023 \newline
+                \textcolor{accentColor}{Oral presentation $|$ Acceptance rate: 23.3\%}
+    
+            \end{highlights}
+        \end{onecolentry}
+    
+    \subsection{Preprint}
+    
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Hikaru Asano}, Tadashi Kozuno, Kuniaki Saito, Yukino Baba \newline
+                ``Where-to-Unmask: Ground-Truth-Guided Unmasking Order Learning for Masked Diffusion Language Models'' \newline
+                \textit{arXiv preprint}, 2026
+    
+                \item \textbf{Hikaru Asano}, Hiroki Ouchi, Akira Kasuga, Ryo Yonetani \newline
+                ``MobQA: A Benchmark Dataset for Semantic Understanding of Human Mobility Data through Question Answering'' \newline
+                \textit{arXiv preprint}, 2025
+    
+                \item \textbf{Hikaru Asano} \newline
+                ``Sequential Bayesian experimental designs via reinforcement learning'' \newline
+                \textit{arXiv preprint}, 2022
+    
+            \end{highlights}
+        \end{onecolentry}
+    
+    \subsection{Patent}
+    
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Ryo Yonetani, Mai Nishimura Kurose, \textbf{Hikaru Asano} \newline
+                ``Agent Control Device, Learning Device, and Computer-Readable Recording Medium'' \newline
+                \textit{US Patent App. 18/241,146}
+    
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Awards and Honors}
+    
+    \subsection{Scholarships and Grants}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Research RA in Value Exchange Engineering by RIISE@UTokyo} \newline
+                2,000,000 yen, 2023-2024.
+    
+                \item \textbf{The foundation Matsuo Scholarship Society} \newline
+                Scholarship and commuting expenses grant, free accommodation in student dormitories, provision of meals (free), health insurance expenses grant, total amount granted: approximately 5,000,000 yen, 2019-2023.
+    
+            \end{highlights}
+        \end{onecolentry}
+    
+    \subsection{Academic Awards}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Young Researcher Award (21/517)} \newline
+                The 32nd Annual Meeting of the Association for Natural Language Processing@Japan, 2026.
+    
+                \item \textbf{Hatakeyama Prize} \newline
+                Tomakomai National Institute of Technology, 2019.
+    
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Languages}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Japanese:} Native
+                \item \textbf{English:} TOEFL iBT MyBest Score: 104
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Programming Skills}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Python:} PyTorch, Jax, Transformers, TRL, Ray
+                \item \textbf{Others:} C++
+            \end{highlights}
+        \end{onecolentry}
+
+\end{document}

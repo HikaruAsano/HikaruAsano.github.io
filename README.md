@@ -6,27 +6,60 @@ A personal academic website built with Jekyll and GitHub Pages, using the [Minim
 
 ```
 .
-├── _config.yml                  # Site settings (name, affiliation, social links, etc.)
-├── index.md                     # Main page content (About Me, News, Education, etc.)
+├── _config.yml                       # Site settings (name, affiliation, social links, etc.)
+├── index.md                          # Main page content (About Me, News, Education, etc.)
 ├── _data/
-│   ├── publications.yml         # Publication data (edit here to add papers)
-│   └── awards.yml               # Awards data (edit here to add awards)
+│   ├── cv_info.yml                   # Personal info for CV (name, email, website)
+│   ├── education.yml                 # Education entries with supervisors
+│   ├── research_experience.yml       # Research experience with mentors and topics
+│   ├── publications.yml              # Publications (peer-reviewed, preprints, patents)
+│   ├── awards.yml                    # Awards and scholarships
+│   ├── languages.yml                 # Language proficiencies
+│   ├── skills.yml                    # Programming skills
+│   ├── news.yml                      # News items
+│   └── services.yml                  # Academic services (reviewing, etc.)
 ├── _includes/
-│   ├── publications.html        # Publication template (usually no need to edit)
-│   └── awards.html              # Awards template (usually no need to edit)
+│   ├── publications.html             # Publication template
+│   ├── awards.html                   # Awards template
+│   ├── news.html                     # News template
+│   └── services.html                 # Services template
 ├── _layouts/
-│   └── homepage.html            # HTML layout template
+│   └── homepage.html                 # HTML layout template
 ├── _sass/
-│   └── minimal-light.scss       # Stylesheet (SCSS)
+│   └── minimal-light.scss            # Stylesheet (SCSS)
 ├── assets/
 │   ├── css/
-│   │   ├── style.scss           # CSS entry point
-│   │   └── publications.css     # Publication list styles
-│   ├── img/                     # Image files
-│   ├── files/                   # PDFs and other files
-│   └── js/                      # JavaScript
-├── Gemfile                      # Ruby dependencies
-└── CNAME                        # Custom domain configuration
+│   ├── img/
+│   ├── files/
+│   │   └── CV.pdf                    # Auto-generated CV (do not edit manually)
+│   └── js/
+├── scripts/
+│   └── generate_cv.py                # Generates cv/hikaru_asano_cv.tex from _data/
+├── cv/
+│   └── hikaru_asano_cv.tex           # Auto-generated LaTeX source (do not edit manually)
+├── .github/
+│   └── workflows/
+│       └── update_cv.yml             # Auto-updates CV on push
+├── Gemfile                           # Ruby dependencies
+└── CNAME                             # Custom domain configuration
+```
+
+## CV Auto-Generation
+
+The CV (`assets/files/CV.pdf`) is automatically regenerated whenever `_data/` files or `index.md` are pushed to `main`.
+
+**Workflow:**
+1. Push a change to any `_data/*.yml` or `index.md`
+2. GitHub Actions runs `scripts/generate_cv.py` → `cv/hikaru_asano_cv.tex`
+3. LaTeX compiles the `.tex` → `assets/files/CV.pdf`
+4. Both files are committed back automatically
+
+To regenerate the CV locally (requires [PyYAML](https://pypi.org/project/PyYAML/) and a LaTeX distribution):
+
+```bash
+pip install pyyaml
+python scripts/generate_cv.py
+cd cv && latexmk -pdf hikaru_asano_cv.tex
 ```
 
 ## How to Edit
@@ -42,10 +75,38 @@ peer_reviewed:
     venue: "ICML"
     venue_full: "International Conference on Machine Learning"
     year: 2026
-    note: "oral"
+    note: "oral, acceptance rate 26%"   # or "poster", "long paper"
     arxiv: "https://arxiv.org/abs/xxxx.xxxxx"
     github: "https://github.com/..."
     project: "https://project-page.example.com"
+```
+
+### Adding a research experience
+
+Add an entry to `_data/research_experience.yml`:
+
+```yaml
+- organization: "Organization Name"
+  location: "City, Country"
+  role: "Research Intern"
+  start: "Apr 2026"
+  end: "Present"
+  mentors:
+    - "Mentor Name"
+  topic: "Research topic description"
+```
+
+### Adding an education entry
+
+Add an entry to `_data/education.yml`:
+
+```yaml
+- institution: "University Name"
+  degree: "Degree Title"
+  department: "Department Name"
+  start: "Apr 2019"
+  end: "Mar 2022"
+  supervisor: "Supervisor Name"
 ```
 
 ### Adding an award
@@ -64,7 +125,7 @@ academic_awards:
 
 ### Editing profile and news
 
-Edit `index.md` directly.
+Edit `index.md` or `_data/news.yml` directly.
 
 ### Changing site settings
 
@@ -102,7 +163,6 @@ Files are automatically rebuilt on save.
 If `bundle install` fails:
 
 ```bash
-# Remove lock file and reinstall
 rm Gemfile.lock
 bundle install
 ```
