@@ -15,6 +15,15 @@
 # =============================================================================
 
 peer_reviewed:
+  - authors: "<strong>Hikaru Asano</strong>, Hiroki Ouchi, Akira Kasuga, Ryo Yonetani"
+    title: "MobQA: A Benchmark Dataset for Semantic Understanding of Human Mobility Data through Question Answering"
+    venue: "EMNLP"
+    venue_full: "The 2026 Conference on Empirical Methods in Natural Language Processing"
+    year: 2026
+    note: "acceptance rate 15.4%"
+    arxiv: "https://arxiv.org/abs/2508.11163"
+    github: "https://github.com/CyberAgentAILab/mobqa"
+
   - authors: "<strong>Hikaru Asano</strong>, Tadashi Kozuno, Yukino Baba"
     title: "Self Iterative Label Refinement via Robust Unlabeled Learning"
     venue: "NeurIPS"
@@ -61,12 +70,6 @@ preprints:
     title: "Where-to-Unmask: Ground-Truth-Guided Unmasking Order Learning for Masked Diffusion Language Models"
     year: 2026
     arxiv: "https://arxiv.org/abs/2602.09501"
-
-  - authors: "<strong>Hikaru Asano</strong>, Hiroki Ouchi, Akira Kasuga, Ryo Yonetani"
-    title: "MobQA: A Benchmark Dataset for Semantic Understanding of Human Mobility Data through Question Answering"
-    year: 2025
-    arxiv: "https://arxiv.org/abs/2508.11163"
-    github: "https://github.com/CyberAgentAILab/mobqa"
 
   - authors: "<strong>Hikaru Asano</strong>"
     title: "Sequential Bayesian experimental designs via reinforcement learning"

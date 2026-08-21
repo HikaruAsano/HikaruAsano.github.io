@@ -8,6 +8,9 @@
 # =============================================================================
 
 scholarships:
+  - title: "KAKUSEI Project by AIST"
+    description: "3,000,000 yen (salary and research expenses), 2026."
+
   - title: "Research RA in Value Exchange Engineering by RIISE@UTokyo"
     description: "2,000,000 yen, 2023-2024."
 

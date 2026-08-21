@@ -6,6 +6,10 @@
 #   date    - Display date (e.g., "Mar. 2026")
 #   content - News content (HTML supported)
 # =============================================================================
+- date: "Aug. 2026"
+  content: "Two first-author papers have been accepted to the EMNLP 2026 Main Conference (**acceptance rate 15.4%**)."
+- date: "Jul. 2026"
+  content: "Selected for the 2026 [KAKUSEI Project](https://kakusei.aist.go.jp/r8/) with JPY 3 million in funding."
 - date: "Mar. 2026"
   content: "Received Young Researcher Award (**21/517 top 4%**) at NLP 2026."
 - date: "Mar. 2026"
