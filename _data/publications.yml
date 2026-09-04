@@ -15,6 +15,13 @@
 # =============================================================================
 
 peer_reviewed:
+  - authors: "<strong>Hikaru Asano</strong>, Hidezo Suganuma, Ryutaro Mori, Yukino Baba"
+    title: "Cross-Centaur: Modeling Individual Decision-Making Across Psychological Tasks with Language Models"
+    venue: "EMNLP"
+    venue_full: "The 2026 Conference on Empirical Methods in Natural Language Processing"
+    year: 2026
+    note: "acceptance rate 15.4%"
+
   - authors: "<strong>Hikaru Asano</strong>, Hiroki Ouchi, Akira Kasuga, Ryo Yonetani"
     title: "MobQA: A Benchmark Dataset for Semantic Understanding of Human Mobility Data through Question Answering"
     venue: "EMNLP"
