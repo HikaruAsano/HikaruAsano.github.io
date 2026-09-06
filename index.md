@@ -2,8 +2,6 @@
 layout: homepage
 ---
 
-<p class="eyebrow">Machine learning &amp; human behavior</p>
-
 ## About Me
 
 I am a 3rd-year PhD student at the University of Tokyo. My research explores multi-agent reinforcement learning, computational social science, and language models for understanding human behavior.
