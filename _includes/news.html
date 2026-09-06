@@ -1,4 +1,6 @@
-## News
-{%- for item in site.data.news %}
-- **[{{ item.date }}]** {{ item.content }}
-{%- endfor %}
+<h2 id="news">News</h2>
+<ul class="news-list">
+{% for item in site.data.news %}
+  <li><span class="news-date">{{ item.date }}</span><div>{{ item.content | markdownify }}</div></li>
+{% endfor %}
+</ul>

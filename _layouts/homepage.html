@@ -16,89 +16,44 @@
 
     <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
     <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
-    <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
 
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin=anonymous>
-
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/publications.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/publications.css' | relative_url }}">
 
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="wrapper">
-      <header>
-
-        {% if site.avatar %}
-        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
-        {% endif %}
-
+      <header class="profile">
+        {% if site.avatar %}<img class="avatar" src="{{ site.avatar | relative_url }}" alt="Portrait of {{ site.title }}" width="160" height="160">{% endif %}
         <h1>{{ site.title }}</h1>
-
-        {% if site.data.profile.position %}
-        <position>{{ site.data.profile.position }}</position>
-        <br>
-        {% endif %}
-        {% if site.affiliation %}
-        <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
-        <br>
-        {% endif %}
-        {% if site.email %}
-        <email>{{ site.email }}</email>
-        {% endif %}
-
-        <br>
-        <br>
-        <div class="social-icons">
-        {% if site.google_scholar %}
-        <a href="{{ site.google_scholar }}">
-          <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
-        </a>
-        {% endif %}
-
-        {% if site.cv_link %}
-        <a href="{{ site.cv_link }}">
-          <i class="ai ai-cv" style="font-size:1.3rem;"></i>
-        </a>
-        {% endif %}
-
-        {% if site.github_link %}
-        <a href="{{ site.github_link }}">
-          <i class="fab fa-github"></i>
-        </a>
-        {% endif %}
-
-        {% if site.linkedin %}
-        <a href="{{ site.linkedin }}">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        {% endif %}
-
-        {% if site.twitter %}
-        <a href="{{ site.twitter }}">
-          <i class="fab fa-twitter"></i>
-        </a>
-        {% endif %}
+        <p class="position">{{ site.data.profile.position }}</p>
+        <a class="affiliation" href="{{ site.affiliation_link }}">{{ site.affiliation }}</a>
+        {% if site.email %}<a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
+        <div class="profile-actions">
+          {% if site.cv_link %}<a class="button" href="{{ site.cv_link | relative_url }}">Curriculum vitae <span aria-hidden="true">↗</span></a>{% endif %}
+          {% if site.google_scholar %}<a class="scholar-link" href="{{ site.google_scholar }}">Google Scholar <span aria-hidden="true">↗</span></a>{% endif %}
         </div>
-        <br>
-
+        <nav class="section-nav" aria-label="Page sections">
+          <a href="#about-me">About</a>
+          <a href="#research-interests">Research</a>
+          <a href="#news">News</a>
+          <a href="#publications">Publications</a>
+          <a href="#education">Background</a>
+        </nav>
+        <div class="social-links" aria-label="Social profiles">
+          {% if site.github_link %}<a href="{{ site.github_link }}">GitHub ↗</a>{% endif %}
+          {% if site.linkedin %}<a href="{{ site.linkedin }}">LinkedIn ↗</a>{% endif %}
+          {% if site.twitter %}<a href="{{ site.twitter }}">Twitter ↗</a>{% endif %}
+        </div>
       </header>
-      <section>
-
-      {{ content }}
-
-      <br>
-
-      {% if site.enable_footnote %}
-      <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
-      {% endif %}
-
-      </section>
-      <footer>
-
-      </footer>
+      <main id="main-content" tabindex="-1">
+        {{ content }}
+        {% if site.enable_footnote %}
+        <footer>Powered by Jekyll · Based on <a href="https://github.com/yaoyao-liu/minimal-light">Minimal Light</a></footer>
+        {% endif %}
+      </main>
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     {% if site.google_analytics %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

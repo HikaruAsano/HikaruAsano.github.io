@@ -2,17 +2,23 @@
 layout: homepage
 ---
 
+<p class="eyebrow">Machine learning &amp; human behavior</p>
+
 ## About Me
 
-I am a 3rd-year PhD student at University of Tokyo.
+I am a 3rd-year PhD student at the University of Tokyo. My research explores multi-agent reinforcement learning, computational social science, and language models for understanding human behavior.
 
 ## Research Interests
 
-- **Multi-agent Reinforcement Learning:** Cooperation in Decentralized Manner
-- **Computational Social Science:** Application of ML for Social Science
-- **LLM for Behavior Understanding:** Replication of Human Behavior and Utilizing Common Sense Reasoning
+<ul class="research-list">
+  <li><strong>Multi-agent Reinforcement Learning</strong> — Cooperation in a decentralized manner.</li>
+  <li><strong>Computational Social Science</strong> — Applying machine learning to social science.</li>
+  <li><strong>LLM for Behavior Understanding</strong> — Replicating human behavior and utilizing common sense reasoning.</li>
+</ul>
 
 {% include news.html %}
+
+{% include publications.html %}
 
 ## Education
 - D.Sc in Graduate School of Arts and Sciences, The University of Tokyo (2024.4-present)
@@ -25,8 +31,6 @@ I am a 3rd-year PhD student at University of Tokyo.
 - CyberAgent AI Lab, Part-time Researcher (2023.10-2025.10)
 - OMRON SINIC X Corporation, Research Intern (2022.3-2023.8)
 - OMRON SINIC X Corporation, Research Intern (2020.8-2020.9)
-
-{% include publications.html %}
 
 {% include awards.html %}
 
