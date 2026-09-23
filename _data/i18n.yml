@@ -1,0 +1,13 @@
+# =============================================================================
+# Language-specific strings
+# =============================================================================
+# The Japanese page (/ja/) is identical to the English page except for the
+# name and the Education section (see _includes/home.md).
+# `name` falls back to `title` in _config.yml when it is not set.
+# =============================================================================
+
+en: {}
+
+ja:
+  name: "浅野 輝"
+  name_en: "Hikaru Asano"

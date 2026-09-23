@@ -1,7 +1,9 @@
+{%- include i18n.html -%}
+{%- assign name = t.name | default: site.title -%}
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: "en" }}">
   <head>
-    <title>{{ site.title }} | {{site.affiliation}}</title>
+    <title>{{ name }} | {{ site.affiliation }}</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +12,19 @@
     {% if site.keywords %}
     <meta name="keywords" content="{{ site.keywords }}">
     {% endif %}
-    {% if site.canonical %}
-    <link rel="canonical" href="{{ site.canonical }}"/>
+    <link rel="canonical" href="{{ page.url | absolute_url }}"/>
+    <link rel="alternate" hreflang="en" href="{{ '/' | absolute_url }}"/>
+    <link rel="alternate" hreflang="ja" href="{{ '/ja/' | absolute_url }}"/>
+    <link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}"/>
+
+    <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark | relative_url }}" type="image/png" />
+    <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon | relative_url }}" type="image/png" />
+
+    {% if t.name %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600&display=swap&text={{ name | url_encode }}">
     {% endif %}
-
-    <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
-    <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
-
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/publications.css' | relative_url }}">
 
@@ -24,9 +32,13 @@
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="wrapper">
+      <nav class="lang-switch" aria-label="Language">
+        <a href="{{ '/' | relative_url }}" lang="en" hreflang="en"{% if lang == "en" %} aria-current="page"{% endif %}>EN</a>
+        <a href="{{ '/ja/' | relative_url }}" lang="ja" hreflang="ja"{% if lang == "ja" %} aria-current="page"{% endif %}>日本語</a>
+      </nav>
       <header class="profile">
         {% if site.avatar %}<img class="avatar" src="{{ site.avatar | relative_url }}" alt="Portrait of {{ site.title }}" width="160" height="160">{% endif %}
-        <h1>{{ site.title }}</h1>
+        {% if t.name %}<h1 class="name-ja"><span lang="{{ lang }}">{{ name }}</span><span class="name-en">{{ t.name_en }}</span></h1>{% else %}<h1>{{ name }}</h1>{% endif %}
         <p class="position">{{ site.data.profile.position }}</p>
         <a class="affiliation" href="{{ site.affiliation_link }}">{{ site.affiliation }}</a>
         {% if site.email %}<a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
