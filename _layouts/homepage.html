@@ -25,17 +25,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600&display=swap&text={{ name | url_encode }}">
     {% endif %}
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/publications.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    <link rel="stylesheet" href="{{ '/assets/css/publications.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <div class="wrapper">
+    <div class="lang-bar">
       <nav class="lang-switch" aria-label="Language">
         <a href="{{ '/' | relative_url }}" lang="en" hreflang="en"{% if lang == "en" %} aria-current="page"{% endif %}>EN</a>
         <a href="{{ '/ja/' | relative_url }}" lang="ja" hreflang="ja"{% if lang == "ja" %} aria-current="page"{% endif %}>日本語</a>
       </nav>
+    </div>
+    <div class="wrapper">
       <header class="profile">
         {% if site.avatar %}<img class="avatar" src="{{ site.avatar | relative_url }}" alt="Portrait of {{ site.title }}" width="160" height="160">{% endif %}
         {% if t.name %}<h1 class="name-ja"><span lang="{{ lang }}">{{ name }}</span><span class="name-en">{{ t.name_en }}</span></h1>{% else %}<h1>{{ name }}</h1>{% endif %}
