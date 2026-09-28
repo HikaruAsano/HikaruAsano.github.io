@@ -73,6 +73,16 @@ peer_reviewed:
 
 
 preprints:
+  - authors: "<strong>Hikaru Asano</strong>, Yotaro Kubo, So Kuroki"
+    title: "Training-Free Pronunciation Transcription via Text-Constrained Acoustic Rescoring"
+    year: 2026
+    arxiv: "https://arxiv.org/abs/2609.30924"
+
+  - authors: "Manato Yaguchi, Yotaro Kubo, <strong>Hikaru Asano</strong>, So Kuroki"
+    title: "Learning Natural Conversational Behavior in Tandem Speech-to-Speech Models with Randomized Guidance"
+    year: 2026
+    arxiv: "https://arxiv.org/abs/2609.30773"
+
   - authors: "<strong>Hikaru Asano</strong>, Tadashi Kozuno, Kuniaki Saito, Yukino Baba"
     title: "Where-to-Unmask: Ground-Truth-Guided Unmasking Order Learning for Masked Diffusion Language Models"
     year: 2026
