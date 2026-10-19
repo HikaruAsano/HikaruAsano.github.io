@@ -21,6 +21,7 @@ peer_reviewed:
     venue_full: "The 2026 Conference on Empirical Methods in Natural Language Processing"
     year: 2026
     note: "acceptance rate 15.4%"
+    arxiv: "https://arxiv.org/abs/2610.23157"
 
   - authors: "<strong>Hikaru Asano</strong>, Hiroki Ouchi, Akira Kasuga, Ryo Yonetani"
     title: "MobQA: A Benchmark Dataset for Semantic Understanding of Human Mobility Data through Question Answering"
